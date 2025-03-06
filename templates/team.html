@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/team.css') }}"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@600&display=swap"
+    />
+  </head>
+  <body>
+    <div class="team">
+      <img class="team-child" alt="" src="{{ url_for('static', filename='images/public/rectangle-443@2x.png') }}" /><img
+        class="indian-premier-league-logo-png-icon7"
+        alt=""
+        src="{{ url_for('static', filename='images/public/indianpremierleaguelogo-png3-1@2x.png') }}"
+      /><img
+        class="team-item"
+        alt=""
+        src="{{ url_for('static', filename='images/public/rectangle-613@2x.png') }}"
+      /><label class="team-analysis">Team Analysis</label>
+      <img
+        id="t1"
+        class="rcb-1-icon"
+        alt=""
+        src=""
+      />
+      <img
+        id="t2"
+        style="transform: scaleX(-1);"
+        class="rcb-1-ficon"
+        alt=""
+        src=""
+      />
+      <button class="team-child1"></button
+      ><img
+        class="group-icon14"
+        alt=""
+        src="{{ url_for('static', filename='images/public/group.svg') }}"
+        id="groupIcon1"
+      />
+    </div>
+
+    <button id="go" class="button1">GO</button>
+    <div class="select-box">
+      <div class="options-container">
+        {% for i in msg%}
+          <div class="option">
+            <input type="radio" class="radio" id="{{i}}" name="category" />
+            <label for="{{i}}">{{i}}</label>
+          </div>
+        {% endfor%}
+
+      </div>
+
+      <div id="team" class="selected">Select Team</div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+      </div>
+    </div>
+    <div id="info" class="info" style="display:none;">
+      <label class="l1">Ipl Trophies</label>
+      <label class="l2">Total Matches Played</label>
+      <label class="l3">Total Matches Won</label>
+      <label class="l4">Total Matches Lost</label>
+      <label class="l5">Total Matches N/R</label>
+      <img class="line1_1" alt="" src="{{ url_for('static', filename='images/public/line-2.svg') }}"/>
+      <img class="line1_2" alt="" src="{{ url_for('static', filename='images/public/line-2.svg') }}"/>
+      <label class="l6">Finishing in Top 4</label>
+      <label class="l7">Highest Score</label>
+      <label class="l8">Lowest Score</label>
+      <img class="line2_1" alt="" src="{{ url_for('static', filename='images/public/line-2.svg') }}"/>
+      <img class="line2_2" alt="" src="{{ url_for('static', filename='images/public/line-2.svg') }}"/>
+      <label class="l9">Highest Run Scorer</label>
+      <label class="l10">Highest Wicket Taker</label>
+      <label class="l11">Orange Cap Holders</label>
+      <label class="l12">Purple Cap Holders</label>
+      <label class="l13">Present Captain</label>
+      <img class="line3_1" alt="" src="{{ url_for('static', filename='images/public/line-2.svg') }}"/>
+
+
+      <label id="l1a" class="l1a"></label>
+      <label id="l2a" class="l2a"></label>
+      <label id="l3a" class="l3a"></label>
+      <label id="l4a" class="l4a"></label>
+      <label id="l5a" class="l5a"></label>
+      <label id="l6a" class="l6a"></label>
+      <label id="l7a" class="l7a"></label>
+      <label id="l8a" class="l8a"></label>
+      <label id="l9a" class="l9a"></label>
+      <label id="l10a" class="l10a"></label>
+      <label id="l11a" class="l11a"></label>
+      <label id="l12a" class="l12a"></label>
+      <label id="l13a" class="l13a"></label>
+    </div>
+
+
+
+
+
+    <script src="{{ url_for('static', filename='js/team.js') }}"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
+        <script>
+      var groupIcon1 = document.getElementById("groupIcon1");
+      if (groupIcon1) {
+        groupIcon1.addEventListener("click", function (e) {
+          window.location.href = "/index";
+        });
+      }
+    </script>
+  </body>
+</html>

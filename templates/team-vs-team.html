@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/team-vs-team.css') }}"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@600&display=swap"
+    />
+  </head>
+  <body>
+    <div class="team-vs-team">
+      <div class="vs4">VS</div>
+      <img
+        class="team-vs-team-inner"
+        alt=""
+        src="{{ url_for('static', filename='images/public/rectangle-442@2x.png') }}"
+      /><img
+        class="indian-premier-league-logo-png-icon6"
+        alt=""
+        src="{{ url_for('static', filename='images/public/indianpremierleaguelogo-png3-11@2x.png') }}"
+      /><img
+        class="team-vs-team-child1"
+        alt=""
+        src="{{ url_for('static', filename='images/public/rectangle-613@2x.png') }}"
+      /><label class="team-vs-team1">Team vs Team</label
+      ><img id="t1" class="aa" alt="" src="" />
+      <img id="t2"  class="bb" alt="" src=""/>
+      <button class="team-vs-team-child2"></button
+      ><img
+        class="group-icon12"
+        alt=""
+        src="{{ url_for('static', filename='images/public/group.svg') }}"
+        id="groupIcon2"
+      />
+    </div>
+    <button id="go" class="button1">GO</button>
+    <div class="select-box">
+      <div class="options-container">
+        {% for i in msg%}
+          <div class="option">
+            <input type="radio" class="radio" id="{{i}}" name="category" />
+            <label for="{{i}}">{{i}}</label>
+          </div>
+        {% endfor%}
+
+      </div>
+
+      <div class="selected">Select Team</div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+      </div>
+    </div>
+
+
+
+
+    <div class="select-box1">
+      <div class="options-container1">
+        {% for j in msg%}
+          <div class="option1">
+            <input type="radio" class="radio1" id="{{j ~ '1'}}" name="category" />
+            <label for="{{j ~ '1'}}">{{j}}</label>
+          </div>
+        {% endfor %}
+
+      </div>
+
+      <div class="selected1">Select Team</div>
+
+      <div class="search-box1">
+        <input type="text" placeholder="Search..." />
+      </div>
+    </div>
+    <div id="info" class="info" style="display:none;">
+      <label class="l1">Total Matches Played</label>
+      <label class="l2">Total Matches Team1 Won</label>
+      <label class="l3">Total Matches Team2 Won</label>
+      <label class="l4"> Total No Result Matches</label>
+      <label class="l5">Team1 Win %</label>
+      <label class="l6">Team2 Win %</label>
+      <label class="l7">IPL Trophies</label>
+      <label class="l8">Top 4</label>
+      <label class="l9">Dept Better In</label>
+      <label class="l10">Avg Net Runrate</label>
+      <label class="l11">Orange Cap Holders</label>
+      <label class="l12">Purple Cap Holders</label>
+      <img class="line1_1" alt="" src="{{ url_for('static', filename='images/public/line-2.svg') }}"/>
+      <img class="line1_2" alt="" src="{{ url_for('static', filename='images/public/line-2.svg') }}"/>
+      <img class="line2_1" alt="" src="{{ url_for('static', filename='images/public/line-2.svg') }}"/>
+      <img class="line2_2" alt="" src="{{ url_for('static', filename='images/public/line-2.svg') }}"/>
+      <img class="line2_3" alt="" src="{{ url_for('static', filename='images/public/line-2.svg') }}"/>
+      <img class="line2_4" alt="" src="{{ url_for('static', filename='images/public/line-2.svg') }}"/>
+      <img class="line2_5" alt="" src="{{ url_for('static', filename='images/public/line-2.svg') }}"/>
+    <div class="info2"></div>
+      <label class="l1a" id="l1a"></label>
+      <label class="l2a" id="l2a"></label>
+      <label class="l3a" id="l3a"></label>
+      <label class="l4a" id="l4a"></label>
+      <label class="l5a" id="l5a"></label>
+      <label class="l6a" id="l6a"></label>
+      <label class="l71a" id="l71a"></label>
+      <label class="l72a" id="l72a"></label>
+      <label class="l81a" id="l81a"></label>
+      <label class="l82a" id="l82a"></label>
+      <label class="l91a" id="l91a"></label>
+      <label class="l92a" id="l92a"></label>
+      <label class="l101a" id="l101a"></label>
+      <label class="l102a" id="l102a"></label>
+      <label class="l111a" id="l111a"></label>
+      <label class="l112a" id="l112a"></label>
+      <label class="l121a" id="l121a"></label>
+      <label class="l122a" id="l122a"></label>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/team_vs_team.js') }}"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
+      <script>
+      var groupIcon2 = document.getElementById("groupIcon2");
+      if (groupIcon2) {
+        groupIcon2.addEventListener("click", function (e) {
+          window.location.href = "/index";
+        });
+      }
+      </script>
+  </body>
+</html>

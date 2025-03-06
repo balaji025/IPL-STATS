@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}"/>
+    <style>
+    .carousel-inner {
+      background-color: #1F2845;
+    }
+    .carousel-indicators li {
+      background-color: white;
+    }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@600&display=swap"
+    />
+  </head>
+  <body>
+
+    <div class="home-page">
+      <img
+        class="home-page-child"
+        alt=""
+        src="{{ url_for('static', filename='images/public/rectangle-443@2x.png') }}"
+      /><img
+        class="indian-premier-league-logo-png-icon12"
+        alt=""
+        src="{{ url_for('static', filename='images/public/indianpremierleaguelogo-png3-1@2x.png') }}"
+      />
+      <img class="ipl2022-pt" id="pt" src="{{ url_for('static', filename='images/public/2023.png') }}"/>
+      <img
+        class="home-page-inner"
+        alt=""
+        src="{{ url_for('static', filename='images/public/rectangle-484@2x.png') }}"
+      /><label class="analytics">ANALYTICS</label
+      ><button class="rectangle-parent1">
+        <div class="frame-child2"></div>
+    </button
+      ><button class="single-ply" id="singlePly">Single Player</button
+      ><button class="home-page-child2"></button
+      ><button class="t-vs-t" id="tVsT">Team vs Team</button
+      ><button class="home-page-child3"></button
+      ><button class="team1" id="team">Team</button
+      ><button class="home-page-child4"></button
+      ><button class="ply-vs-ply" id="plyVsPly">Player vs Player</button
+      ><button class="home-page-child1"></button
+      ><button class="t-vs-all" id="tVsAll">Team vs All Teams</button>
+      <button class="bestteams" id="bestteams">Best Teams</button>
+
+      <img class="image-2-icon" id="teamwin" alt="" src="{{ url_for('static', filename='images/ipl_winners_photo/csk2023.png') }}"/>
+
+    </div>
+      <select name="year" id="year" onchange="year(this.value)">
+        <option value="2023" >2023</option>
+        <option value="2022" >2022</option>
+        <option value="2021" >2021</option>
+        <option value="2020" >2020</option>
+        <option value="2019" >2019</option>
+        <option value="2018" >2018</option>
+        <option value="2017" >2017</option>
+        <option value="2016" >2016</option>
+        <option value="2015" >2015</option>
+        <option value="2014" >2014</option>
+        <option value="2013" >2013</option>
+        <option value="2012" >2012</option>
+        <option value="2011" >2011</option>
+        <option value="2010" >2010</option>
+        <option value="2009" >2009</option>
+        <option value="2008" >2008</option>
+      </select>
+
+
+    <script>
+      var singlePly = document.getElementById("singlePly");
+      if (singlePly) {
+        singlePly.addEventListener("click", function (e) {
+          window.location.href = "/s-i-n-g-l-e-p-l-a-y-e-r";
+        });
+      }
+
+      var tVsT = document.getElementById("tVsT");
+      if (tVsT) {
+        tVsT.addEventListener("click", function (e) {
+          window.location.href = "/team-vs-team";
+        });
+      }
+
+      var team = document.getElementById("team");
+      if (team) {
+        team.addEventListener("click", function (e) {
+          window.location.href = "/team";
+        });
+      }
+
+      var plyVsPly = document.getElementById("plyVsPly");
+      if (plyVsPly) {
+        plyVsPly.addEventListener("click", function (e) {
+          window.location.href = "/player-vs-player";
+        });
+      }
+
+      var tVsAll = document.getElementById("tVsAll");
+      if (tVsAll) {
+        tVsAll.addEventListener("click", function (e) {
+          window.location.href = "/team-vs-all";
+        });
+      }
+
+      var bestteams = document.getElementById("bestteams");
+      if (bestteams) {
+        bestteams.addEventListener("click", function (e) {
+          window.location.href = "/bestteams";
+        });
+      }
+      </script>
+    <script>
+      function year(selectedValue){
+      var images={
+        "2023":["{{ url_for('static', filename='images/public/2023.png') }}","{{ url_for('static', filename='images/ipl_winners_photo/csk2023.png') }}"],
+        "2022":["{{ url_for('static', filename='images/public/2022.jpg') }}","{{ url_for('static', filename='images/ipl_winners_photo/gt2022.png') }}"],
+        "2021":["{{ url_for('static', filename='images/public/2021.jpg') }}","{{ url_for('static', filename='images/ipl_winners_photo/csk2021.png') }}"],
+        "2020":["{{ url_for('static', filename='images/public/2020.jpg') }}","{{ url_for('static', filename='images/ipl_winners_photo/mi2020.png') }}"],
+        "2019":["{{ url_for('static', filename='images/public/2019.jpg') }}","{{ url_for('static', filename='images/ipl_winners_photo/mi2019.png') }}"],
+        "2018":["{{ url_for('static', filename='images/public/2018.jpg') }}","{{ url_for('static', filename='images/ipl_winners_photo/csk2018.png') }}"],
+        "2017":["{{ url_for('static', filename='images/public/2017.jpg') }}","{{ url_for('static', filename='images/ipl_winners_photo/mi2017.jpg') }}"],
+        "2016":["{{ url_for('static', filename='images/public/2016.jpg') }}","{{ url_for('static', filename='images/ipl_winners_photo/srh2016.jpg') }}"],
+        "2015":["{{ url_for('static', filename='images/public/2015.jpg') }}","{{ url_for('static', filename='images/ipl_winners_photo/mi2015.png') }}"],
+        "2014":["{{ url_for('static', filename='images/public/2014.jpg') }}","{{ url_for('static', filename='images/ipl_winners_photo/kkr2014.jpg') }}"],
+        "2013":["{{ url_for('static', filename='images/public/2013.jpg') }}","{{ url_for('static', filename='images/ipl_winners_photo/mi2013.jpg') }}"],
+        "2012":["{{ url_for('static', filename='images/public/2012.jpg') }}","{{ url_for('static', filename='images/ipl_winners_photo/kkr2012.jpg') }}"],
+        "2011":["{{ url_for('static', filename='images/public/2011.jpg') }}","{{ url_for('static', filename='images/ipl_winners_photo/csk2011.jpeg') }}"],
+        "2010":["{{ url_for('static', filename='images/public/2010.jpg') }}","{{ url_for('static', filename='images/ipl_winners_photo/csk2010.jpeg') }}"],
+        "2009":["{{ url_for('static', filename='images/public/2009.jpg') }}","{{ url_for('static', filename='images/ipl_winners_photo/dc2009.jpg') }}"],
+        "2008":["{{ url_for('static', filename='images/public/2008.jpg') }}","{{ url_for('static', filename='images/ipl_winners_photo/rr2008.png') }}"],
+      };
+
+      var imageUrls = images[selectedValue];
+      if (imageUrls) {
+      document.getElementById('pt').src=imageUrls[0];
+      document.getElementById('teamwin').src=imageUrls[1];
+      }else{
+      document.getElementById('pt').src='';
+      document.getElementById('pt').src='';
+      }
+    }
+    </script>
+
+  </body>
+</html>

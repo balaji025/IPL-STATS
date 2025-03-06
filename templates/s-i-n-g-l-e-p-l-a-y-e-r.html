@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/s-i-n-g-l-e-p-l-a-y-e-r.css') }}"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@600&display=swap"
+    />
+  </head>
+  <body>
+    <div class="single-player">
+      <img
+        class="single-player-child"
+        alt=""
+        src="{{ url_for('static', filename='images/public/rectangle-443@2x.png') }}"
+      /><img
+        class="indian-premier-league-logo-png-icon11"
+        alt=""
+        src="{{ url_for('static', filename='images/public/indianpremierleaguelogo-png3-1@2x.png') }}"
+      /><img
+        class="single-player-item"
+        alt=""
+        src="{{ url_for('static', filename='images/public/rectangle-483@2x.png') }}"
+      /><label class="single-player1">SINGLE PLAYER</label
+      >
+      <button class="frame-button"></button
+      ><button class="single-player-child3"></button
+      ><button class="group3" id="group">
+        <img class="vector-icon22" alt="" src="{{ url_for('static', filename='images/public/group.svg') }}"/>
+    </button>
+    </div>
+      <button id="go" class="button1">Go</button>
+      <div class="select-box">
+      <div class="options-container">
+        {% for i in msg%}
+          <div class="option">
+            <input type="radio" class="radio" id="{{i}}" name="category" />
+            <label for="{{i}}">{{i}}</label>
+          </div>
+        {% endfor%}
+
+      </div>
+
+      <div id="player" class="selected">Select Player</div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+      </div>
+    </div>
+    <div id="m1-box" class="m1-box" style="display:none">
+      <img id="player-photo" class="aa" alt="" src=""/>
+      <label class="m2">Matches Played  :</label>
+      <label id="m2a" class="m2a"></label>
+
+    </div>
+    <div id="batting" style="display:none" class="batting">
+      <label class="bl1">Runs Scored</label>
+      <label class="bl2">Average</label>
+      <label class="bl3">Strike Rate</label>
+      <label class="bl4">30+ Score</label>
+      <label class="bl5">100+ Score</label>
+      <label class="bl6">4s Scored</label>
+      <label class="bl7">6s Scored</label>
+      <div class="bline"></div>
+      <label id="bl1a" class="bl1a"></label>
+      <label id="bl2a" class="bl2a"></label>
+      <label id="bl3a" class="bl3a"></label>
+      <label id="bl4a" class="bl4a"></label>
+      <label id="bl5a" class="bl5a"></label>
+      <label id="bl6a" class="bl6a"></label>
+      <label id="bl7a" class="bl7a"></label>
+      <img id="bat_graph" class="bat_graph"/>
+    </div>
+    <div id="fielding" style="display:none" class="fielding">
+      <label id="fl1" class="fl1">Run outs</label>
+      <label id="fl2" class="fl2">Stumpings</label>
+      <label id="fl3" class="fl3">Caught out</label>
+      <div class="fline1"></div>
+      <div class="fline2"></div>
+      <label id="fl1a" class="fl1a"></label>
+      <label id="fl2a" class="fl2a"></label>
+      <label id="fl3a" class="fl3a"></label>
+      <div class="fline3"></div>
+    </div>
+    <div id="bowling" style="display:none" class="bowling">
+      <label id="bol1" class="bol1">Overs Bowled</label>
+      <label id="bol2" class="bol2">Wickets</label>
+      <label id="bol3" class="bol3">Economy</label>
+      <label id="bol4" class="bol4">Average</label>
+      <label id="bol5" class="bol5">Strike Rate</label>
+      <label id="bol6" class="bol6">3w Hauls</label>
+      <label id="bol7" class="bol7">5w Hauls</label>
+      <div class="boline"></div>
+      <label id="bol1a" class="bol1a"></label>
+      <label id="bol2a" class="bol2a"></label>
+      <label id="bol3a" class="bol3a"></label>
+      <label id="bol4a" class="bol4a"></label>
+      <label id="bol5a" class="bol5a"></label>
+      <label id="bol6a" class="bol6a"></label>
+      <label id="bol7a" class="bol7a"></label>
+      <img id="bowl_graph" class="bowl_graph"/>
+
+    </div>
+    <div id="other-stats" style="display:none" class="other-stats">
+      <label class="osl1">Teams Played For</label>
+      <label class="osl2">Best Performance (Batting)</label>
+      <label class="osl3">Best Performance (Bowling)</label>
+      <div class="osline"></div>
+      <label id="osl1a" class="osl1a"></label>
+      <label id="osl2a" class="osl2a"></label>
+      <label id="osl3a" class="osl3a"></label>
+    </div>
+    <img id="batting_img" class="batting_img" style="display:none" alt="" src="{{ url_for('static', filename='images/img/batting.png') }}"/>
+    <img id="bowling_img" class="bowling_img" style="display:none" alt="" src="{{ url_for('static', filename='images/img/bowling.png') }}"/>
+
+    <script src="{{ url_for('static', filename='js/single-player.js') }}"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      var group = document.getElementById("group");
+      if (group) {
+        group.addEventListener("click", function (e) {
+          window.location.href = "/index";
+        });
+      }
+      
+
+      </script>
+  </body>
+</html>

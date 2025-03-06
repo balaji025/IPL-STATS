@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/team-vs-all.css') }}"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@600&display=swap"
+    />
+  </head>
+  <body>
+    <div class="team-vs-all">
+      <button class="team-vs-all-child"></button
+      ><img
+        class="team-vs-all-item"
+        alt=""
+        src="{{ url_for('static', filename='images/public/rectangle-441@2x.png') }}"
+      /><img
+        class="indian-premier-league-logo-png-icon5"
+        alt=""
+        src="{{ url_for('static', filename='images/public/indianpremierleaguelogo-png3-1@2x.png') }}"
+      /><img
+        class="team-vs-all-inner"
+        alt=""
+        src="{{ url_for('static', filename='images/public/rectangle-613@2x.png') }}"
+      /><label class="team-vs-all1">Team vs All</label>
+      <img id="t1" class="bb" alt="" src=""/>
+      <img id="s1" class="csk-s1-icon" alt="" src=""/>
+      <img id="s2" class="dc-s1-icon" alt="" src=/>
+      <img id="s3" class="gt-s1-icon" alt="" src=""/>
+      <img id="s4" class="kkr-s1-icon" alt="" src=""/>
+      <img id="s5" class="lsg-s1-icon" alt="" src=""/>
+      <img id="s6" class="mi-s1-icon" alt="" src=""/>
+      <img id="s7" class="pbks-s1-icon" alt="" src=""/>
+      <img id="s8" class="rcb-s1-icon" alt="" src=""/>
+      <img id="s9" class="rr-s1-icon" alt="" src=""/>
+      <img id="wl" class="team-vs-all-child1" alt="" src="{{ url_for('static', filename='images/public/line-2.svg') }}" style="display:none"/>
+      <div id='r1' class="rectangle-div1" style="display:none">
+        <label class="r1l1">Total Matches Played</label>
+        <label class="r1l2">Won By Team1</label>
+        <label class="r1l3">Won By Team2</label>
+        <label class="r1l4">Team1 IPL Trophies</label>
+        <label class="r1l5">Team2 IPL Trophies</label>
+        <div class="r1wl"></div>
+        <label id="r1l1a" class="r1l1a"></label>
+        <label id="r1l2a" class="r1l2a"></label>
+        <label id="r1l3a" class="r1l3a"></label>
+        <label id="r1l4a" class="r1l4a"></label>
+        <label id="r1l5a" class="r1l5a"></label>
+      </div>
+      <div id='r2' class="rectangle-div2" style="display:none">
+        <label class="r2l1">Total Matches Played</label>
+        <label class="r2l2">Won By Team1</label>
+        <label class="r2l3">Won By Team2</label>
+        <label class="r2l4">Team1 IPL Trophies</label>
+        <label class="r2l5">Team2 IPL Trophies</label>
+        <div class="r2wl"></div>
+        <label id="r2l1a" class="r2l1a"></label>
+        <label id="r2l2a" class="r2l2a"></label>
+        <label id="r2l3a" class="r2l3a"></label>
+        <label id="r2l4a" class="r2l4a"></label>
+        <label id="r2l5a" class="r2l5a"></label>
+      </div>
+      <div id='r3' class="rectangle-div3" style="display:none">
+        <label class="r3l1">Total Matches Played</label>
+        <label class="r3l2">Won By Team1</label>
+        <label class="r3l3">Won By Team2</label>
+        <label class="r3l4">Team1 IPL Trophies</label>
+        <label class="r3l5">Team2 IPL Trophies</label>
+        <div class="r3wl"></div>
+        <label id="r3l1a" class="r3l1a"></label>
+        <label id="r3l2a" class="r3l2a"></label>
+        <label id="r3l3a" class="r3l3a"></label>
+        <label id="r3l4a" class="r3l4a"></label>
+        <label id="r3l5a" class="r3l5a"></label>
+      </div>
+      <div id='r4' class="rectangle-div4" style="display:none">
+        <label class="r4l1">Total Matches Played</label>
+        <label class="r4l2">Won By Team1</label>
+        <label class="r4l3">Won By Team2</label>
+        <label class="r4l4">Team1 IPL Trophies</label>
+        <label class="r4l5">Team2 IPL Trophies</label>
+        <div class="r4wl"></div>
+        <label id="r4l1a" class="r4l1a"></label>
+        <label id="r4l2a" class="r4l2a"></label>
+        <label id="r4l3a" class="r4l3a"></label>
+        <label id="r4l4a" class="r4l4a"></label>
+        <label id="r4l5a" class="r4l5a"></label>
+      </div>
+      <div id='r5' class="rectangle-div5" style="display:none">
+        <label class="r5l1">Total Matches Played</label>
+        <label class="r5l2">Won By Team1</label>
+        <label class="r5l3">Won By Team2</label>
+        <label class="r5l4">Team1 IPL Trophies</label>
+        <label class="r5l5">Team2 IPL Trophies</label>
+        <div class="r5wl"></div>
+        <label id="r5l1a" class="r5l1a"></label>
+        <label id="r5l2a" class="r5l2a"></label>
+        <label id="r5l3a" class="r5l3a"></label>
+        <label id="r5l4a" class="r5l4a"></label>
+        <label id="r5l5a" class="r5l5a"></label>
+      </div>
+      <div id='r6' class="rectangle-div6" style="display:none">
+        <label class="r6l1">Total Matches Played</label>
+        <label class="r6l2">Won By Team1</label>
+        <label class="r6l3">Won By Team2</label>
+        <label class="r6l4">Team1 IPL Trophies</label>
+        <label class="r6l5">Team2 IPL Trophies</label>
+        <div class="r6wl"></div>
+        <label id="r6l1a" class="r6l1a"></label>
+        <label id="r6l2a" class="r6l2a"></label>
+        <label id="r6l3a" class="r6l3a"></label>
+        <label id="r6l4a" class="r6l4a"></label>
+        <label id="r6l5a" class="r6l5a"></label>
+      </div>
+      <div id='r7' class="rectangle-div7" style="display:none">
+        <label class="r7l1">Total Matches Played</label>
+        <label class="r7l2">Won By Team1</label>
+        <label class="r7l3">Won By Team2</label>
+        <label class="r7l4">Team1 IPL Trophies</label>
+        <label class="r7l5">Team2 IPL Trophies</label>
+        <div class="r7wl"></div>
+        <label id="r7l1a" class="r7l1a"></label>
+        <label id="r7l2a" class="r7l2a"></label>
+        <label id="r7l3a" class="r7l3a"></label>
+        <label id="r7l4a" class="r7l4a"></label>
+        <label id="r7l5a" class="r7l5a"></label>
+      </div>
+      <div id='r8' class="rectangle-div8" style="display:none">
+        <label class="r8l1">Total Matches Played</label>
+        <label class="r8l2">Won By Team1</label>
+        <label class="r8l3">Won By Team2</label>
+        <label class="r8l4">Team1 IPL Trophies</label>
+        <label class="r8l5">Team2 IPL Trophies</label>
+        <div class="r8wl"></div>
+        <label id="r8l1a" class="r8l1a"></label>
+        <label id="r8l2a" class="r8l2a"></label>
+        <label id="r8l3a" class="r8l3a"></label>
+        <label id="r8l4a" class="r8l4a"></label>
+        <label id="r8l5a" class="r8l5a"></label>
+      </div>
+      <div id='r9' class="rectangle-div9" style="display:none">
+        <label class="r9l1">Total Matches Played</label>
+        <label class="r9l2">Won By Team1</label>
+        <label class="r9l3">Won By Team2</label>
+        <label class="r9l4">Team1 IPL Trophies</label>
+        <label class="r9l5">Team2 IPL Trophies</label>
+        <div class="r9wl"></div>
+        <label id="r9l1a" class="r9l1a"></label>
+        <label id="r9l2a" class="r9l2a"></label>
+        <label id="r9l3a" class="r9l3a"></label>
+        <label id="r9l4a" class="r9l4a"></label>
+        <label id="r9l5a" class="r9l5a"></label>
+      </div>
+
+      <img
+        class="group-icon9"
+        alt=""
+        src="{{ url_for('static', filename='images/public/group.svg') }}"
+        id="groupIcon1"
+      />
+    </div>
+    <button id="go" class="button1">GO</button>
+    <div class="select-box">
+      <div class="options-container">
+
+        {% for i in msg%}
+          <div class="option">
+            <input type="radio" class="radio" id="{{i}}" name="category" />
+            <label for="{{i}}">{{i}}</label>
+          </div>
+        {% endfor%}
+
+      </div>
+
+      <div class="selected">Select Team</div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+      </div>
+    </div>
+
+
+    <script src="{{ url_for('static', filename='js/team_vs_all.js') }}"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
+
+    <script>
+      var groupIcon1 = document.getElementById("groupIcon1");
+      if (groupIcon1) {
+        groupIcon1.addEventListener("click", function (e) {
+          window.location.href = "/index";
+        });
+      }
+      </script>
+  </body>
+</html>

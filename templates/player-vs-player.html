@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/player-vs-player.css') }}"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@600&display=swap"
+    />
+  </head>
+  <body>
+
+    <div class="player-vs-player">
+      <img
+        class="player-vs-player-item"
+        alt=""
+        src="{{ url_for('static', filename='images/public/rectangle-44@2x.png') }}"
+      /><img
+        class="player-vs-player-inner"
+        alt=""
+        src="{{ url_for('static', filename='images/public/rectangle-612@2x.png') }}"
+      /><label class="player-vs-player1">Player vs Player</label
+      ><img
+        class="indian-premier-league-logo-png-icon3"
+        alt=""
+        src="{{ url_for('static', filename='images/public/indianpremierleaguelogo-png3-1@2x.png') }}"
+      />
+    </div>
+
+      <div class="vs2">VS</div>
+    </div>
+    <button id="go" class="button1">GO</button>
+        <div class="select-box">
+      <div class="options-container">
+        {% for i in msg%}
+          <div class="option">
+            <input type="radio" class="radio" id="{{i}}" name="category" />
+            <label for="{{i}}">{{i}}</label>
+          </div>
+        {% endfor%}
+
+      </div>
+
+      <div class="selected">Select Player</div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+      </div>
+    </div>
+
+         <div class="select-box1">
+      <div class="options-container1">
+        {% for j in msg%}
+            <div class="option1">
+              <input type="radio" class="radio1" id="{{j ~ '1'}}" name="category" />
+              <label for="{{j ~ '1'}}">{{j}}</label>
+            </div>
+         {% endfor %}
+
+      </div>
+
+      <div class="selected1">Select Player</div>
+
+      <div class="search-box1">
+        <input type="text" placeholder="Search..." />
+      </div>
+    </div>
+    <button class="team-vs-team-child2"></button>
+    <img
+        class="group-icon12"
+        alt=""
+        src="{{ url_for('static', filename='images/public/group.svg') }}"
+        id="groupIcon2"
+      />
+    <div id="m1" class="m1" style="display:none">
+      <img id="t1" class="aa" alt="" src="" />
+    </div>
+    <div id="m2" class="m2" style="display:none">
+      <img id="t2"  class="bb" alt="" src=""/>
+    </div>
+    <div id="d1" class="d1" style="display:none">
+      <label class="d1l1">Matches Played</label>
+      <label class="d1l2">Runs Scored</label>
+      <label class="d1l3">Average</label>
+      <label class="d1l4">Strike Rate</label>
+      <label class="d1l5">4s Scored</label>
+      <label class="d1l6">6s Scored</label>
+      <label id="d1l1a" class="d1l1a"></label>
+      <label id="d1l2a" class="d1l2a"></label>
+      <label id="d1l3a" class="d1l3a"></label>
+      <label id="d1l4a" class="d1l4a"></label>
+      <label id="d1l5a" class="d1l5a"></label>
+      <label id="d1l6a" class="d1l6a"></label>
+    </div>
+    <div id="d2" class="d2" style="display:none">
+      <label class="d2l1">Matches Played</label>
+      <label class="d2l2">Overs Bowled</label>
+      <label class="d2l3">Wickets</label>
+      <label class="d2l4">Economy</label>
+      <label class="d2l5">Strike Rate</label>
+      <label class="d2l6">3w Hauls</label>
+      <label id="d2l1a" class="d2l1a"></label>
+      <label id="d2l2a" class="d2l2a"></label>
+      <label id="d2l3a" class="d2l3a"></label>
+      <label id="d2l4a" class="d2l4a"></label>
+      <label id="d2l5a" class="d2l5a"></label>
+      <label id="d2l6a" class="d2l6a"></label>
+    </div>
+    <div id="d3" class="d3" style="display:none">
+      <label id="d3l1" class="d3l1">Matches Played</label>
+      <label id="d3l2" class="d3l2">Run outs</label>
+      <label id="d3l3" class="d3l3">Stumpings</label>
+      <label id="d3l4" class="d3l4">Caught out</label>
+      <label id="d3l1a" class="d3l1a"></label>
+      <label id="d3l2a" class="d3l2a"></label>
+      <label id="d3l3a" class="d3l3a"></label>
+      <label id="d3l4a" class="d3l4a"></label>
+    </div>
+    <div id="d4" class="d4" style="display:none">
+      <label class="d4l1">Matches Played</label>
+      <label class="d4l2">Runs Scored</label>
+      <label class="d4l3">Average</label>
+      <label class="d4l4">Strike Rate</label>
+      <label class="d4l5">4s Scored</label>
+      <label class="d4l6">6s Scored</label>
+      <label id="d4l1a" class="d4l1a"></label>
+      <label id="d4l2a" class="d4l2a"></label>
+      <label id="d4l3a" class="d4l3a"></label>
+      <label id="d4l4a" class="d4l4a"></label>
+      <label id="d4l5a" class="d4l5a"></label>
+      <label id="d4l6a" class="d4l6a"></label>
+    </div>
+    <div id="d5" class="d5" style="display:none">
+      <label class="d5l1">Matches Played</label>
+      <label class="d5l2">Overs Bowled</label>
+      <label class="d5l3">Wickets</label>
+      <label class="d5l4">Economy</label>
+      <label class="d5l5">Strike Rate</label>
+      <label class="d5l6">3w Hauls</label>
+      <label id="d5l1a" class="d5l1a"></label>
+      <label id="d5l2a" class="d5l2a"></label>
+      <label id="d5l3a" class="d5l3a"></label>
+      <label id="d5l4a" class="d5l4a"></label>
+      <label id="d5l5a" class="d5l5a"></label>
+      <label id="d5l6a" class="d5l6a"></label>
+    </div>
+    <div id="d6" class="d6" style="display:none">
+      <label id="d6l1" class="d6l1">Matches Played</label>
+      <label id="d6l2" class="d6l2">Run outs</label>
+      <label id="d6l3" class="d6l3">Stumpings</label>
+      <label id="d6l4" class="d6l4">Caught out</label>
+      <label id="d6l1a" class="d6l1a"></label>
+      <label id="d6l2a" class="d6l2a"></label>
+      <label id="d6l3a" class="d6l3a"></label>
+      <label id="d6l4a" class="d6l4a"></label>
+    </div>
+
+    <img id="batting_img" class="batting_img" alt="" style="display:none" src="{{ url_for('static', filename='images/img/batting.png') }}"/>
+    <img id="bowling_img" class="bowling_img" alt="" style="display:none" src="{{ url_for('static', filename='images/img/bowling.png') }}"/>
+    <img id="fielding_img" class="fielding_img" alt="" style="display:none" src="{{ url_for('static', filename='images/img/fielding.png') }}"/>
+    <div id="matchup1" class="matchup1" style="display:none">
+      <img id="m1bat" class="m1bat" alt="" src="{{ url_for('static', filename='images/img/batting.png') }}"/>
+      <img id="m1bow" class="m1bow" alt="" src="{{ url_for('static', filename='images/img/bowling.png') }}"/>
+      <div class="line1"></div>
+      <div class="mt1p1">
+        <img id="mt1p1" class="aa" alt="" src="" />
+      </div>
+      <div class="mt1p2">
+        <img id="mt1p2" class="aa" alt="" src="" />
+      </div>
+      <label class="m1l1">Runs made</label>
+      <label class="m1l2">Balls faced</label>
+      <label class="m1l3">Strike Rate</label>
+      <label class="m1l4">Average</label>
+      <label class="m1l5">Dismissed</label>
+      <label class="m1l6">Economy</label>
+      <label class="m1l7">Balls per Boundary</label>
+      <label id="m1l1a" class="m1l1a"></label>
+      <label id="m1l2a" class="m1l2a"></label>
+      <label id="m1l3a" class="m1l3a"></label>
+      <label id="m1l4a" class="m1l4a"></label>
+      <label id="m1l5a" class="m1l5a"></label>
+      <label id="m1l6a" class="m1l6a"></label>
+      <label id="m1l7a" class="m1l7a"></label>
+    </div>
+    <div id="matchup2" class="matchup2" style="display:none">
+      <img id="m2bat" class="m2bat" alt="" src="{{ url_for('static', filename='images/img/bowling.png') }}"/>
+      <img id="m2bow" class="m2bow" alt="" src="{{ url_for('static', filename='images/img/batting.png') }}"/>
+      <div class="line2"></div>
+      <div class="mt2p1">
+        <img id="mt2p1" class="aa" alt="" src="" />
+      </div>
+      <div class="mt2p2">
+        <img id="mt2p2" class="aa" alt="" src="" />
+      </div>
+      <label class="m2l1">Runs made</label>
+      <label class="m2l2">Balls faced</label>
+      <label class="m2l3">Strike Rate</label>
+      <label class="m2l4">Average</label>
+      <label class="m2l5">Dismissed</label>
+      <label class="m2l6">Economy</label>
+      <label class="m2l7">Balls per Boundary</label>
+      <label id="m2l1a" class="m2l1a"></label>
+      <label id="m2l2a" class="m2l2a"></label>
+      <label id="m2l3a" class="m2l3a"></label>
+      <label id="m2l4a" class="m2l4a"></label>
+      <label id="m2l5a" class="m2l5a"></label>
+      <label id="m2l6a" class="m2l6a"></label>
+      <label id="m2l7a" class="m2l7a"></label>
+    </div>
+    <script src="{{ url_for('static', filename='js/player-vs-player.js') }}"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
+
+
+
+    <script>
+      var batVsBat = document.getElementById("batVsBat");
+      if (batVsBat) {
+        batVsBat.addEventListener("click", function (e) {
+          window.location.href = "/bat-vs-bat";
+        });
+      }
+
+      var rectangleButton1 = document.getElementById("rectangleButton1");
+      if (rectangleButton1) {
+        rectangleButton1.addEventListener("click", function (e) {
+          window.location.href = "/bowl-vs-bowl";
+        });
+      }
+
+      var bowlVsBowl = document.getElementById("bowlVsBowl");
+      if (bowlVsBowl) {
+        bowlVsBowl.addEventListener("click", function (e) {
+          window.location.href = "/bowl-vs-bowl";
+        });
+      }
+
+      var aRVsAR = document.getElementById("aRVsAR");
+      if (aRVsAR) {
+        aRVsAR.addEventListener("click", function (e) {
+          window.location.href = "/a-r-vs-a-r";
+        });
+      }
+
+      var batVsBowl = document.getElementById("batVsBowl");
+      if (batVsBowl) {
+        batVsBowl.addEventListener("click", function (e) {
+          window.location.href = "/bat-vs-bowl";
+        });
+      }
+      
+      var rectangleButton4 = document.getElementById("rectangleButton4");
+      if (rectangleButton4) {
+        rectangleButton4.addEventListener("click", function (e) {
+          window.location.href = "/index";
+        });
+      }
+      
+      var groupIcon = document.getElementById("groupIcon2");
+      if (groupIcon) {
+        groupIcon.addEventListener("click", function (e) {
+          window.location.href = "/index";
+        });
+      }
+      </script>
+  </body>
+</html>
